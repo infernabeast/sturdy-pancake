@@ -10,14 +10,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var forms_1 = require('@angular/forms');
 var app_component_1 = require('./app.component');
+var page_component_1 = require('./page.component');
+var dataset_detail_component_1 = require('./dataset-detail.component');
+var datasets_component_1 = require('./datasets.component');
+var dataset_service_1 = require('./dataset.service');
+var app_routing_1 = require('./app.routing');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent],
+            imports: [
+                platform_browser_1.BrowserModule,
+                forms_1.FormsModule,
+                app_routing_1.routing
+            ],
+            declarations: [
+                app_component_1.AppComponent,
+                page_component_1.PageComponent,
+                dataset_detail_component_1.DatasetDetailComponent,
+                datasets_component_1.DatasetsComponent
+            ],
+            providers: [
+                dataset_service_1.DatasetService
+            ],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

@@ -1,0 +1,14 @@
+<h2>My Data</h2>
+<ul class="datasets">
+  <li *ngFor="let dataset of datasets"
+    [class.selected]="dataset === selectedDataset"
+    (click)="onSelect(dataset)">
+    <span class="badge">{{dataset.id}}</span> {{dataset.name}}
+  </li>
+</ul>
+<div *ngIf="selectedDataset">
+  <h2>
+    {{selectedDataset.name | uppercase}} is my favorite dataset
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>

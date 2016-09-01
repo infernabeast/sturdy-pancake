@@ -1,0 +1,8 @@
+<h3>My Data</h3>
+<div class="grid grid-pad">
+  <div *ngFor="let dataset of datasets" (click)="gotoDetail(dataset)" class="col-1-4">
+    <div class="module hero">
+      <h4>{{dataset.name}}</h4>
+    </div>
+  </div>
+</div>
