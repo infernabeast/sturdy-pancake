@@ -10,5 +10,4 @@ export const DATASETS: Dataset[] = [
   { id: 7, name: 'Restaurants' },
   { id: 8, name: 'Coffee Shops' },
   { id: 9, name: 'Bars' },
-  { id: 10, name: 'Buildings' }
 ];

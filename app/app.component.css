@@ -1,4 +1,4 @@
-h1 {
+/*h1 {
   font-size: 1.2em;
   color: #999;
   margin-bottom: 0;
@@ -25,4 +25,24 @@ nav a:hover {
 }
 nav a.active {
   color: #039be5;
+}*/
+.ins-workbook-header {
+  background-color: #0079C2;
+  border-color: transparent;
+}
+
+.ins-add-data{
+  background-color: #1C5C96;
+  padding-top: 100px;
+  height: 24px;
+}
+
+.ins-page-header{
+  background-color: #196FA6;
+  padding-top: 100px;
+  height: 24px;
+}
+
+.ins-data-pane-row {
+  padding-top: 50px;
 }

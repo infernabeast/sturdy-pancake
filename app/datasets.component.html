@@ -1,14 +1,34 @@
-<h2>My Data</h2>
-<ul class="datasets">
-  <li *ngFor="let dataset of datasets"
-    [class.selected]="dataset === selectedDataset"
-    (click)="onSelect(dataset)">
-    <span class="badge">{{dataset.id}}</span> {{dataset.name}}
-  </li>
-</ul>
-<div *ngIf="selectedDataset">
-  <h2>
-    {{selectedDataset.name | uppercase}} is my favorite dataset
-  </h2>
-  <button (click)="gotoDetail()">View Details</button>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 ins-data-pane">
+      <h5>My Data</h5>
+
+
+
+
+
+      <ul class="datasets">
+        <li *ngFor="let dataset of datasets"
+          [class.selected]="dataset === selectedDataset"
+          (click)="onSelect(dataset)">
+          <span class="glyphicon glyphicon-triangle-right"></span> <span class="glyphicon glyphicon-calendar ins-blue"></span> {{dataset.name}} <span class="glyphicon glyphicon-option-vertical pull-right"></span>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="col-md-9">
+
+      <div *ngIf="selectedDataset">
+        <h2>
+          {{selectedDataset.name | uppercase}} is my favorite dataset
+        </h2>
+        <button (click)="gotoDetail()">View Details</button>
+      </div>
+
+    </div>
+
+  </div>
 </div>
